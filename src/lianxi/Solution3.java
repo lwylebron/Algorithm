@@ -74,7 +74,7 @@ class Solution3 {
 
         wordBreak(s,list1);
 
-
+        System.out.println(" ");
 
     }
 }
