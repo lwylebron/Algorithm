@@ -178,7 +178,7 @@ public  class demo {
    public static void HeapSort(int[] arr){
         //构建大顶堆
        for(int i=arr.length/2-1;i>=0;i--){
-           //从第一个非叶子节点，从下往上，从右至做调整为大顶推
+           //从第一个非叶子节点，从下往上，从右至左做调整为大顶推
            adjustHeap(arr,i,arr.length);
        }
 

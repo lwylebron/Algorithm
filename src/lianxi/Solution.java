@@ -58,5 +58,11 @@ class Solution {
         String str = "absddw";
 
         List<List<String>> list = partition(str);
+
+        String str1 = str.substring(0, 2);
+        String str2 = str.substring(2);
+
+        System.out.println(str1+":"+str2);
+
     }
 }
