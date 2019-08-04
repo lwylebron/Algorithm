@@ -1,3 +1,5 @@
+package ClassicAlgorithm;
+
 public class reverseListNode {
 
   public static Node reverse(Node head){
@@ -13,9 +15,13 @@ public class reverseListNode {
   }
 
     /**
-     * 翻转位置m-n之间的节点
+     * 翻转位置m-n之间的节点   leetcode92
+     *
+     * 1->2->3->4->5  2 4   1->4->3->2->5
+     *
+     * 重点在于先记录1、2这两个节点，即start和end，等到遍历结束后连起来。
      */
-    public static Node reverseMN(Node head,int m,int n){
+    public static Node reverseMN(Node head, int m, int n){
         if(head==null||n-m<=0){
             return head;
         }
@@ -41,12 +47,14 @@ public class reverseListNode {
             cur = next;
         }
 
-        start.next = prev;
+
         end.next = cur;
 
         if(m==1){
             return prev;
         }
+
+        start.next = prev;
         return head;
     }
 

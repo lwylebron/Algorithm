@@ -1,3 +1,5 @@
+package ClassicAlgorithm;
+
 public class KMP {
     /**
      * 模式串匹配问题

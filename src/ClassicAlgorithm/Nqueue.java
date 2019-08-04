@@ -1,3 +1,5 @@
+package ClassicAlgorithm;
+
 public class Nqueue {
 
     /**

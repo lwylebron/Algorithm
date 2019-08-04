@@ -1,3 +1,5 @@
+package AlgorithmDemo;
+
 import java.util.Stack;
 
 public  class demo {

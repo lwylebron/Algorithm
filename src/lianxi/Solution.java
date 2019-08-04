@@ -1,7 +1,6 @@
 package lianxi;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 class Solution {
 
@@ -63,6 +62,20 @@ class Solution {
         String str2 = str.substring(2);
 
         System.out.println(str1+":"+str2);
+
+        List<Integer> list1 = new ArrayList<>();
+        list1.add(1);
+
+        List<Integer> list2 = new ArrayList<>();
+        list2.add(1);
+        list2.add(2);
+
+        Set<List<Integer>> set = new HashSet<>();
+        set.add(list1);
+        set.add(list2);
+
+        set.add(list1);
+        System.out.println(set.size());
 
     }
 }
