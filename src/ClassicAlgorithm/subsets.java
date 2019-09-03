@@ -36,6 +36,17 @@ public class subsets {
         }
     }
 
+    public static void main(String[] args) {
+        int[] nums = new int[]{1,2,3,4};
+        List<List<Integer>> list = subset(nums);
+        for(int i=0;i<list.size();i++){
+            List<Integer> list1 = list.get(i);
+            for(int j=0;j<list1.size();j++){
+                System.out.print(list1.get(j));
+            }
+            System.out.println();
+        }
+    }
 
 
 }
