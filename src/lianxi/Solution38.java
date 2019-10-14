@@ -1,4 +1,4 @@
-package ClassicAlgorithm;
+package lianxi;
 
 import java.util.Scanner;
 

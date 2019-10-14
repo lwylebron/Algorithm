@@ -395,7 +395,7 @@ public  class demo {
 
 
     /**
-     * 最长上升子序列
+     * 最长上升字串
      * 题目: https://leetcode-cn.com/problems/longest-increasing-subsequence/
      */
 

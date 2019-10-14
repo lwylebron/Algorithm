@@ -19,14 +19,18 @@ public class KMP {
 
          int i=0;
          int j=0;
-         int[] a = getNextArray(t.toCharArray());
+         int[] a = getNext(t.toCharArray());
 
          while(i<slen&&j<tlen){
-             if(j==-1||s.charAt(i)==t.charAt(j)){
+             if(s.charAt(i)==t.charAt(j)){
                  i++;
                  j++;
              }else{
-                 j=a[j];
+                 if(j==0){
+                     i++;
+                 }else{
+                     j=a[j-1];
+                 }
              }
          }
 
@@ -39,6 +43,7 @@ public class KMP {
 
     //寻找相同的前缀及后缀
     //每个字符前的
+    //对于模式串T，next[j]代表了T的前j个字符组成的子串中，其前缀和后缀的最长公共串的长度。
      static int[] getNextArray(char[] t){
 
         int len = t.length;
@@ -61,9 +66,32 @@ public class KMP {
 
     }
 
+    public static int[] getNext(char[] a){
+
+        int j=1;
+        int k=0;
+        int len = a.length;
+        int[] next = new int[len];
+        next[0] = 0;
+
+        while(j<len){
+            if(a[j]==a[k]){
+                j++;
+                k++;
+                next[j-1] = k;
+            }else{
+                k=0;
+                j++;
+            }
+        }
+
+        return next;
+
+    }
+
     public static void main(String[] args) {
         char[] t = new char[]{'a','a','b','a','a','a'};
-        int[] b = getNextArray(t);
+        int[] b = getNext(t);
         int[] c  =new int[]{1,1,1};
        for(int i=0;i<b.length;i++){
            System.out.print(b[i]+" ");
@@ -71,8 +99,8 @@ public class KMP {
 
        System.out.println();
 
-       String str1 = "ababaccda";
-       String str2 = "acc";
+       String str1 = "abacbaccda";
+       String str2 = "accda";
        System.out.print(KMP(str1,str2));
     }
 }

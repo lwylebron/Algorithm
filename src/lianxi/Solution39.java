@@ -11,7 +11,7 @@ import java.util.Scanner;
  * ..E#
  * #为障碍，S为起点，E为终点
  * */
-public class Soution39 {
+public class Solution39 {
 
 
     //上下左右四个方向移动
